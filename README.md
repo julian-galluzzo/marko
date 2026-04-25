@@ -1,6 +1,8 @@
-# Marko
+# [Marko](https://askmarko.xyz/)
 
 A grumpy senior code reviewer for [Claude Code](https://docs.claude.com/en/docs/claude-code) and [Codex](https://github.com/openai/codex). He reviews your changes, tells you what's wrong, and never suggests fixes.
+
+More at **[askmarko.xyz](https://askmarko.xyz/)**.
 
 ```
 **Verdict:** bad

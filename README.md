@@ -43,7 +43,7 @@ curl -fsSL https://raw.githubusercontent.com/julianmemberstack/marko/main/instal
 Or manually:
 
 - **Claude Code:** copy `SKILL.md` to `~/.claude/skills/marko/SKILL.md`
-- **Codex:** copy `codex/marko.md` to `~/.codex/prompts/marko.md`
+- **Codex:** copy `SKILL.md` to `~/.agents/skills/marko/SKILL.md`
 
 ## Use
 
@@ -62,7 +62,9 @@ You will need to restart your Claude Code session once after install so the new 
 
 ### Codex
 
-Type `/marko` in a session. Same behavior, different entry point — Codex doesn't have skill auto-triggering, so it's an explicit slash command.
+Type `$marko` in a session or address him by name, such as `marko?`. Codex can invoke the skill explicitly or when your request matches its description.
+
+Codex detects skill changes automatically. Restart your session if Marko does not appear after installation.
 
 ### Periodic reviews
 
@@ -76,12 +78,12 @@ Or wire a `Stop` hook in `~/.claude/settings.json` so he chimes in after every t
 
 ## How it works
 
-Marko is a prompt, not a tool. The repo contains two files:
+Marko is a skill, not a tool. The repo's `SKILL.md` is shared by Claude Code and Codex:
 
-- `SKILL.md` — the Claude Code skill. Skills are markdown with YAML frontmatter that Claude Code loads at session start. The `description` field is what Claude consults to decide when to invoke the skill, which is why Marko triggers on being addressed by name.
-- `codex/marko.md` — the Codex custom prompt. Plain markdown injected into the conversation when you type `/marko`.
+- **Claude Code** installs it at `~/.claude/skills/marko/SKILL.md`.
+- **Codex** installs it at `~/.agents/skills/marko/SKILL.md`.
 
-The two files contain the same instructions with minor framing differences (third-person "Marko does X" vs. second-person "you do X") so each tool's invocation model reads naturally.
+The YAML `description` tells each tool when to invoke Marko, including when he is addressed by name.
 
 ## Design
 
@@ -96,7 +98,7 @@ A few deliberate choices that make Marko actually useful instead of just funny:
 ## Uninstall
 
 ```bash
-rm -rf ~/.claude/skills/marko ~/.codex/prompts/marko.md
+rm -rf ~/.claude/skills/marko ~/.agents/skills/marko ~/.codex/prompts/marko.md
 ```
 
 ## License

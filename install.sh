@@ -54,10 +54,10 @@ install_claude() {
 }
 
 install_codex() {
-  local dir="${HOME}/.codex/prompts"
+  local dir="${HOME}/.agents/skills/marko"
   mkdir -p "$dir"
-  fetch "codex/marko.md" "${dir}/marko.md"
-  echo "[ok] Codex        -> ${dir}/marko.md"
+  fetch "SKILL.md" "${dir}/SKILL.md"
+  echo "[ok] Codex        -> ${dir}/SKILL.md"
 }
 
 echo "Installing Marko..."
@@ -73,7 +73,7 @@ cat <<'EOF'
 Marko is installed.
 
   Claude Code: restart your session, then try "marko?" on a branch with changes.
-  Codex:       type /marko in a session.
+  Codex:       restart your session if needed, then type $marko or say "marko?".
 
 He will not be impressed.
 EOF

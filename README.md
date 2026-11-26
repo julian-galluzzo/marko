@@ -1,5 +1,9 @@
 # [Marko](https://askmarko.xyz/)
 
+<!-- yarkr:badges:start -->
+[![Indexed on Yarkr](https://api.yarkr.com/functions/v1/api/api/v1/badges/repos/julian-galluzzo/marko/version.svg)](https://yarkr.com/arks/julian-galluzzo/marko)
+<!-- yarkr:badges:end -->
+
 A grumpy senior code reviewer for [Claude Code](https://docs.claude.com/en/docs/claude-code) and [Codex](https://github.com/openai/codex). He reviews your changes, tells you what's wrong, and never suggests fixes.
 
 More at **[askmarko.xyz](https://askmarko.xyz/)**.
@@ -44,6 +48,38 @@ Or manually:
 
 - **Claude Code:** copy `SKILL.md` to `~/.claude/skills/marko/SKILL.md`
 - **Codex:** copy `codex/marko.md` to `~/.codex/prompts/marko.md`
+
+<!-- yarkr:install:start -->
+## Install with Yarkr
+
+This repo is indexed on [Yarkr](https://yarkr.com/arks/julian-galluzzo/marko) as the ark [julian-galluzzo/marko](https://yarkr.com/arks/julian-galluzzo/marko), so its skills install into Claude Code, Codex, Cursor and other agent harnesses with one command.
+
+### CLI
+
+Install the whole ark, which Yarkr keeps equal to this repo:
+
+```bash
+npx yarkr-cli sync julian-galluzzo/marko
+```
+
+Or add individual skills:
+
+```bash
+npx yarkr-cli add skill:julian-galluzzo/marko/marko
+```
+
+No Node.js? `curl -fsSL https://yarkr.com/install.sh | sh` (macOS, Linux) or `irm https://yarkr.com/install.ps1 | iex` (Windows PowerShell) installs `yarkr` as a standalone binary; then type `yarkr` in place of `npx yarkr-cli`.
+
+### MCP
+
+Connect your agent to the ark over MCP:
+
+```bash
+npx yarkr-cli mcp add julian-galluzzo/marko
+```
+
+Or point any MCP client at `https://api.yarkr.com/functions/v1/api/mcp/o/julian-galluzzo/marko`.
+<!-- yarkr:install:end -->
 
 ## Use
 
